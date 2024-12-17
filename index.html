@@ -5,55 +5,197 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prayakar Rao Dinesh - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #2C3E50;
+            color: white;
+            border-bottom: 3px solid #3498DB;
+            transition: background-color 0.3s ease-in-out;
+        }
+        header:hover {
+            background-color: #34495E;
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .profile-picture:hover {
+            transform: scale(1.1);
+        }
+        .profile-details h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #ffffff;
+        }
+        .profile-details p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #BDC3C7;
+        }
+        section {
+            padding: 30px;
+            background-color: #ffffff;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 85%;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        section:hover {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 24px;
+            color: white;
+            background-color: #2C3E50;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498DB;
+            transition: color 0.3s ease-in-out;
+        }
+        h2:hover {
+            color: #3498DB;
+        }
+        footer {
+            padding: 20px;
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+            border-top: 3px solid #3498DB;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        a {
+            color: #3498DB;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover {
+            color: #1ABC9C;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+            font-size: 16px;
+            transition: transform 0.3s ease-in-out;
+        }
+        ul li:hover {
+            transform: translateX(10px);
+        }
+        i {
+            font-size: 30px;
+            margin-right: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        i:hover {
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        section {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="profile-container">
             <img src="DPHOTO.jpg" alt="Dinesh's Photo" class="profile-picture">
-            <h1>Prayakar Rao Dinesh</h1>
-            <p>Contact: 8688116696 | Email: <a href="mailto:dineshprayakarrao@gmail.com">dineshprayakarrao@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/dinesh-prayakar-rao" target="_blank">dinesh-prayakar-rao</a> | GitHub: <a href="https://github.com/dineshl77" target="_blank">dineshl77</a></p>
+            <div class="profile-details">
+                <h1>Prayakar Rao Dinesh</h1>
+                <p>Contact: 8688116696 | Email: <a href="mailto:dineshprayakarrao@gmail.com">dineshprayakarrao@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/dinesh-prayakar-rao" target="_blank">dinesh-prayakar-rao</a> | GitHub: <a href="https://github.com/dineshl77" target="_blank">dineshl77</a></p>
+            </div>
         </div>
     </header>
 
     <section id="education">
         <h2>Education</h2>
-        <ul>
-            <li>SR University, B.Tech in Computer Science and Engineering (2021 – Present) - 8.46 CGPA</li>
-            <li>VMR Polytechnic, Warangal, Diploma in Computer Engineering (2019 – 2022) - 84.1%</li>
-            <li>Mary Mediatrix High School, SSC (2018 – 2019) - 9.3 GPA</li>
-        </ul>
+        <div style="display: flex; align-items: center;">
+            <img src="clg.jpg" alt="College Logo" style="width: 50px; height: 50px; margin-right: 10px;">
+            <ul>
+                <li><strong>SR University</strong> | B.Tech in Computer Science and Engineering (2021 – Present) - <strong style="font-size: 18px;">8.62 CGPA</strong></li>
+            </ul>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
         <ul>
-            <li><strong>Hostel Booking Interface</strong> | HTML, CSS - Developed a user-friendly web interface for hostel room booking.</li>
-            <li><strong>Exam Seating Arrangement System</strong> | Java, JSP, MySQL - Created a system to automatically generate exam seating arrangements for students.</li>
+            <li>
+                <a href="https://github.com/dineshl77/HOSTEL-BOOKING-SYSTEM-USING-HTML-CSS" target="_blank">
+                    <strong>Hostel Booking Interface</strong>
+                </a> | HTML, CSS
+                <p>A user-friendly web interface for booking hostel rooms, designed to streamline the process for students. The system includes search functionality, room availability checking, and an intuitive booking process.</p>
+            </li>
+            <li>
+                <strong>Exam Seating Arrangement System</strong> | Java, JSP, MySQL
+                <p>This system automates the process of generating seating arrangements for exams. It minimizes human error and optimizes the allocation of seating based on various parameters like student preferences and available spaces.</p>
+            </li>
         </ul>
     </section>
 
     <section id="skills">
         <h2>Technical Skills</h2>
         <ul>
-            <li>Programming Languages: Python, C, Java</li>
-            <li>Web Development: HTML, CSS</li>
-            <li>Databases: MySQL</li>
+            <li>
+                <i class="fab fa-python" style="color: #306998;"></i><strong>Python</strong>
+                <p>A high-level programming language used for data analysis, web development, automation, and artificial intelligence. Known for its readability and versatility in multiple domains.</p>
+            </li>
+            <li>
+                <i class="fab fa-cuttlefish" style="color: #555555;"></i><strong>C</strong>
+                <p>A general-purpose programming language. Often used for systems programming, embedded systems, and applications requiring high-performance processing.</p>
+            </li>
+            <li>
+                <i class="fab fa-java" style="color: #007396;"></i><strong>Java</strong>
+                <p>A widely-used object-oriented programming language, known for its portability and robustness. Commonly used for building enterprise-scale applications, web applications, and Android apps.</p>
+            </li>
+            <li>
+                <i class="fab fa-html5" style="color: #E34F26;"></i><strong>HTML</strong>
+                <p>HTML is used for structuring web content, while CSS is used for designing and styling the appearance of web pages. Together, they are foundational for front-end web development.</p>
+            </li>
+            <li>
+                <i class="fab fa-css3-alt" style="color: #1572B6;"></i><strong>CSS</strong>
+                <p>CSS is used for designing and styling the appearance of web pages. It allows you to control the layout, colors, and fonts, making web pages visually appealing and responsive.</p>
+            </li>
+            <li>
+                <i class="fab fa-mysql" style="color: #00758F;"></i><strong>MySQL</strong>
+                <p>A popular relational database management system used for storing and managing data. It is widely used in web applications for managing large volumes of data.</p>
+            </li>
         </ul>
     </section>
 
     <section id="extracurricular">
         <h2>Extra-Curricular Activities</h2>
         <p>Playing Cricket, Coding, Watching Movies and TV Shows</p>
-    </section>
-
-    <section id="strengths">
-        <h2>Strengths</h2>
-        <ul>
-            <li>Self-motivated and hard-working</li>
-            <li>Ability to work in a team and individually</li>
-            <li>Adaptability to new technologies</li>
-        </ul>
     </section>
 
     <footer>
