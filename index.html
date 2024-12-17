@@ -18,6 +18,7 @@
         header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             padding: 20px;
             background-color: #2C3E50;
             color: white;
@@ -51,6 +52,19 @@
             margin: 5px 0;
             font-size: 16px;
             color: #BDC3C7;
+        }
+        .download-btn {
+            padding: 10px 20px;
+            background-color: #3498DB;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .download-btn:hover {
+            background-color: #2980B9;
         }
         section {
             padding: 30px;
@@ -131,11 +145,20 @@
             <img src="DPHOTO.jpg" alt="Dinesh's Photo" class="profile-picture">
             <div class="profile-details">
                 <h1>Prayakar Rao Dinesh</h1>
-                <p>Contact: 8688116696 | Email: <a href="mailto:dineshprayakarrao@gmail.com">dineshprayakarrao@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/dinesh-prayakar-rao" target="_blank">dinesh-prayakar-rao</a> | GitHub: <a href="https://github.com/dineshl77" target="_blank">dineshl77</a></p>
+                <p>Contact: <i class="fas fa-phone-alt"></i> 8688116696 | Email: <a href="mailto:dineshprayakarrao@gmail.com"><i class="fas fa-envelope"></i> dineshprayakarrao@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/dinesh-prayakar-rao" target="_blank"><i class="fab fa-linkedin"></i> dinesh-prayakar-rao</a> | GitHub: <a href="https://github.com/dineshl77" target="_blank"><i class="fab fa-github"></i> dineshl77</a></p>
             </div>
         </div>
+        <a href="r1.pdf" download>
+            <button class="download-btn">Download Resume</button>
+        </a>
     </header>
+
+
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p>I am <strong>Dinesh</strong>, a software developer with a passion for creating efficient and user-friendly solutions. Currently pursuing a B.Tech in Computer Science and Engineering at SR University, I am skilled in Python, Java, C, HTML, CSS, and MySQL. I have hands-on experience working on projects like the Hostel Booking Interface and Exam Seating Arrangement System. I aim to leverage my technical skills and creativity to build innovative software solutions. I am also dedicated to learning new technologies and improving my problem-solving skills in the field of software development.</p>
+    </section>
 
     <section id="education">
         <h2>Education</h2>
@@ -193,19 +216,10 @@
         </ul>
     </section>
 
-    <section id="extracurricular">
-        <h2>Extra-Curricular Activities</h2>
-        <p>Playing Cricket, Coding, Watching Movies and TV Shows</p>
-    </section>
-
     <footer>
-        <h2>Personal Details</h2>
-        <p>Name: Prayakar Rao Dinesh</p>
-        <p>Father’s Name: Prayakar Rao Chandra Shekar</p>
-        <p>Date of Birth: 25th May 2003</p>
-        <p>Gender: Male | Marital Status: Unmarried | Nationality: Indian</p>
-        <p>Languages Known: English, Telugu, Hindi</p>
-        <p>Hobbies: Playing Cricket, Video Games</p>
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:dineshprayakarrao@gmail.com"><i class="fas fa-envelope"></i> dineshprayakarrao@gmail.com</a></p>
+        <p>Phone: <i class="fas fa-phone-alt"></i> 8688116696</p>
     </footer>
 </body>
 </html>
