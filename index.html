@@ -3,230 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prayakar Rao Dinesh - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for icons -->
+    <title>Prayakar Rao Dinesh's Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+        /* General Theme */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7fc;
+            background-color: #000000; /* Black background */
+            color: #FFFFFF; /* White text */
             margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #2C3E50;
-            color: white;
-            border-bottom: 3px solid #3498DB;
-            transition: background-color 0.3s ease-in-out;
-        }
-        header:hover {
-            background-color: #34495E;
-        }
-        .profile-container {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .profile-picture {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin-right: 20px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .profile-picture:hover {
-            transform: scale(1.1);
-        }
-        .profile-details h1 {
-            margin: 0;
-            font-size: 28px;
-            color: #ffffff;
-        }
-        .profile-details p {
-            margin: 5px 0;
-            font-size: 16px;
-            color: #BDC3C7;
-        }
-        .download-btn {
-            padding: 10px 20px;
-            background-color: #3498DB;
-            color: white;
-            font-size: 16px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease-in-out;
-        }
-        .download-btn:hover {
-            background-color: #2980B9;
-        }
-        section {
-            padding: 30px;
-            background-color: #ffffff;
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            width: 85%;
-            transition: box-shadow 0.3s ease-in-out;
-        }
-        section:hover {
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-        }
-        h2 {
-            font-size: 24px;
-            color: white;
-            background-color: #2C3E50;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #3498DB;
-            transition: color 0.3s ease-in-out;
-        }
-        h2:hover {
-            color: #3498DB;
-        }
-        footer {
-            padding: 20px;
-            background-color: #2C3E50;
-            color: white;
-            text-align: center;
-            border-top: 3px solid #3498DB;
-            margin-top: 40px;
-        }
-        footer p {
-            margin: 5px 0;
-        }
-        a {
-            color: #3498DB;
-            text-decoration: none;
-            transition: color 0.3s ease-in-out;
-        }
-        a:hover {
-            color: #1ABC9C;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin: 10px 0;
-            font-size: 16px;
-            transition: transform 0.3s ease-in-out;
-        }
-        ul li:hover {
-            transform: translateX(10px);
-        }
-        i {
-            font-size: 30px;
-            margin-right: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-        i:hover {
-            transform: scale(1.1);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        section {
-            animation: fadeIn 1s ease-in-out;
+            font-family: Arial, sans-serif;
         }
 
-        /* Responsive styles for smaller screens */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
+        /* Navbar */
+        .navbar {
+            background-color: #FFD700; /* Yellow navbar */
+        }
+        .navbar-brand, .nav-link {
+            color: #000000 !important; /* Black text in navbar */
+        }
+        .nav-link:hover {
+            color: #FFFFFF !important; /* White text on hover */
+        }
+
+        /* Header Section */
+        header {
+            height: 100vh;
+            background-color: #000000; /* Black background */
+            color: #FFFFFF; /* White text */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s forwards 1s; /* Animation to fade in */
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%; /* Circular profile picture */
+            animation: bounceIn 1s ease-out forwards; /* Bounce animation */
+        }
+        .btn-warning {
+            background-color: #FFD700 !important; /* Yellow button */
+            color: #000000 !important; /* Black text on button */
+            border: none;
+        }
+        .btn-warning:hover {
+            background-color: #FFC300 !important; /* Slightly darker yellow on hover */
+        }
+
+        /* Scroll Down Button */
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: #FFD700;
+            cursor: pointer;
+        }
+        .scroll-down:hover {
+            color: #FFC300;
+        }
+
+        /* Boxy Sections */
+        section {
+            background-color: #1C1C1C; /* Darker gray for sections */
+            padding: 30px;
+            margin-bottom: 40px;
+            color: #FFFFFF; /* White text inside sections */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for boxy effect */
+            border-radius: 12px; /* Rounded corners for a boxy feel */
+            opacity: 0;
+            animation: fadeInUp 1.5s ease-out forwards; /* Animation to fade in */
+        }
+        h2 {
+            color: #FFD700; /* Yellow headings */
+            margin-bottom: 20px;
+        }
+
+        /* Social Links */
+        .social-links a {
+            color: #FFD700; /* Yellow icons */
+            margin: 0 15px;
+            font-size: 2rem;
+        }
+        .social-links a:hover {
+            color: #FFC300; /* Slightly darker yellow on hover */
+        }
+
+        /* Typewriter Animation */
+        .typewriter {
+            display: inline-block;
+            border-right: 2px solid #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(30) 1s forwards, blinkCaret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
             }
-            .download-btn {
-                margin-top: 10px;
-                align-self: flex-start;
+            to {
+                width: 100%;
             }
+        }
+
+        @keyframes blinkCaret {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        /* Fade In Animation for Sections */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Fade In Up Animation for Sections */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Bounce In Animation for Profile Picture */
+        @keyframes bounceIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="profile-container">
-            <img src="DPHOTO.jpg" alt="Dinesh's Photo" class="profile-picture">
-            <div class="profile-details">
-                <h1>Prayakar Rao Dinesh</h1>
-                <p>Contact: <i class="fas fa-phone-alt"></i> 8688116696 | Email: <a href="mailto:dineshprayakarrao@gmail.com"><i class="fas fa-envelope"></i> dineshprayakarrao@gmail.com</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/dinesh-prayakar-rao" target="_blank"><i class="fab fa-linkedin"></i> dinesh-prayakar-rao</a> | GitHub: <a href="https://github.com/dineshl77" target="_blank"><i class="fab fa-github"></i> dineshl77</a></p>
-            </div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="index.html">PRAYAKAR RAO DINESH</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="text-white text-center">
+        <div class="container">
+            <img src="DPHOTO.jpg" alt="Profile Picture" class="profile-img mb-4">
+            <h1 class="typewriter">Hi, I'm Dinesh</h1>
+            <button class="btn btn-warning mt-3" onclick="downloadResume()">Download Resume</button>
+        </div>
+        <div class="scroll-down" onclick="scrollToSection('#about')">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </header>
 
-    <section id="about-me">
-        <h2>About Me</h2>
-        <p>I am <strong>Dinesh</strong>, a software developer with a passion for creating efficient and user-friendly solutions. Currently pursuing a B.Tech in Computer Science and Engineering at SR University, I am skilled in Python, Java, C, HTML, CSS, and MySQL. I have hands-on experience working on projects like the Hostel Booking Interface and Exam Seating Arrangement System. I aim to leverage my technical skills and creativity to build innovative software solutions. I am also dedicated to learning new technologies and improving my problem-solving skills in the field of software development.</p>
-    </section>
+    <div class="container my-5">
+        <!-- About Section -->
+        <section id="about" class="mb-5">
+            <h2>About Me</h2>
+            <p>
+                I am Dinesh, a software developer with a passion for creating efficient and user-friendly solutions. 
+                Currently pursuing a B.Tech in Computer Science and Engineering at SR University, I am skilled in Python, Java, C, 
+                HTML, CSS, and MySQL. I have hands-on experience working on projects like the Hostel Booking Interface and Exam Seating 
+                Arrangement System. I aim to leverage my technical skills and creativity to build innovative software solutions. 
+                I am also dedicated to learning new technologies and improving my problem-solving skills in the field of software development.
+            </p>
+        </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div style="display: flex; align-items: center;">
-            <img src="clg.jpg" alt="College Logo" style="width: 50px; height: 50px; margin-right: 10px;">
+        <!-- Education Section -->
+        <section id="education" class="mb-5">
+            <h2>Education</h2>
             <ul>
-                <li><strong>SR University</strong> | B.Tech in Computer Science and Engineering (2021 – Present) - <strong style="font-size: 18px;">8.62 CGPA</strong></li>
+                <li><strong>SR University</strong> - B.Tech in Computer Science and Engineering (2022 – Present) - CGPA: 8.62</li>
+                <li><strong>VMR Polytechnic, Warangal</strong> - Diploma in Computer Engineering (2019 – 2022) - Percentage: 84.1</li>
+                <li><strong>Mary Mediatrix High School, Manthani</strong> - SSC (2018 – 2019) - GPA: 9.3</li>
             </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-5">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong><a href="https://github.com/dineshl77/HOSTEL-BOOKING-SYSTEM-USING-HTML-CSS" target="_blank">Hostel Booking Interface</a></strong> - Developed a user-friendly web interface for hostel room booking using HTML and CSS. The project allows students to view available rooms, select preferences, and book their accommodation efficiently.</li>
+                <li><strong>Exam Seating Arrangement System</strong> - Created a system to automatically generate exam seating arrangements for students using Java, JSP, and MySQL. The system ensures that students are assigned seats in a manner that avoids conflicts and optimizes space usage.</li>
+            </ul>
+        </section>
+        <!-- Skills Section -->
+        <section id="skills" class="mb-5">
+            <h2>Technical Skills</h2>
+            <p>
+                Below are some of the key technical skills I have developed during my academic journey and hands-on projects:
+            </p>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <i class="fab fa-python fa-3x"></i>
+                    <h4>Python</h4>
+                    <p>Used extensively for backend development and data analysis. Familiar with libraries like Flask, Django, and Pandas.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fab fa-java fa-3x"></i>
+                    <h4>Java</h4>
+                    <p>Experienced with Java for building desktop and web applications, including multi-threading, GUI development, and database integration.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fab fa-html5 fa-3x"></i>
+                    <h4>HTML</h4>
+                    <p>Skilled in creating structured web pages using HTML, adhering to accessibility and SEO standards.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fab fa-css3-alt fa-3x"></i>
+                    <h4>CSS</h4>
+                    <p>Proficient in styling web pages using CSS, including layout designs with Flexbox and Grid, and responsive designs using media queries.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fab fa-database fa-3x"></i>
+                    <h4>MySQL</h4>
+                    <p>Hands-on experience in working with MySQL databases, including writing complex queries, creating stored procedures, and optimizing performance.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer Section -->
+    <footer class="text-center py-4">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/dinesh-prayakar" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/dineshl77" target="_blank"><i class="fab fa-github"></i></a>
         </div>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <a href="https://github.com/dineshl77/HOSTEL-BOOKING-SYSTEM-USING-HTML-CSS" target="_blank">
-                    <strong>Hostel Booking Interface</strong>
-                </a> | HTML, CSS
-                <p>A user-friendly web interface for booking hostel rooms, designed to streamline the process for students. The system includes search functionality, room availability checking, and an intuitive booking process.</p>
-            </li>
-            <li>
-                <strong>Exam Seating Arrangement System</strong> | Java, JSP, MySQL
-                <p>This system automates the process of generating seating arrangements for exams. It minimizes human error and optimizes the allocation of seating based on various parameters like student preferences and available spaces.</p>
-            </li>
-        </ul>
-    </section>
-
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul>
-            <li>
-                <i class="fab fa-python" style="color: #306998;"></i><strong>Python</strong>
-                <p>A high-level programming language used for data analysis, web development, automation, and artificial intelligence. Known for its readability and versatility in multiple domains.</p>
-            </li>
-            <li>
-                <i class="fab fa-cuttlefish" style="color: #555555;"></i><strong>C</strong>
-                <p>A general-purpose programming language. Often used for systems programming, embedded systems, and applications requiring high-performance processing.</p>
-            </li>
-            <li>
-                <i class="fab fa-java" style="color: #007396;"></i><strong>Java</strong>
-                <p>A widely-used object-oriented programming language, known for its portability and robustness. Commonly used for building enterprise-scale applications, web applications, and Android apps.</p>
-            </li>
-            <li>
-                <i class="fab fa-html5" style="color: #E34F26;"></i><strong>HTML</strong>
-                <p>HTML is used for structuring web content, while CSS is used for designing and styling the appearance of web pages. Together, they are foundational for front-end web development.</p>
-            </li>
-            <li>
-                <i class="fab fa-css3-alt" style="color: #1572B6;"></i><strong>CSS</strong>
-                <p>CSS is used for designing and styling the appearance of web pages. It allows you to control the layout, colors, and fonts, making web pages visually appealing and responsive.</p>
-            </li>
-            <li>
-                <i class="fab fa-mysql" style="color: #00758F;"></i><strong>MySQL</strong>
-                <p>A popular relational database management system used for storing and managing data. It is widely used in web applications for managing large volumes of data.</p>
-            </li>
-        </ul>
-    </section>
-
-    <footer>
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:dineshprayakarrao@gmail.com"><i class="fas fa-envelope"></i> dineshprayakarrao@gmail.com</a></p>
-        <p>Phone: <i class="fas fa-phone-alt"></i> 8688116696</p>
+        <p>&copy; 2024 Prayakar Rao Dinesh. All rights reserved.</p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function downloadResume() {
+            window.location.href = 'path_to_resume.pdf';  // Replace with your resume file path
+        }
+        function scrollToSection(sectionId) {
+            document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
